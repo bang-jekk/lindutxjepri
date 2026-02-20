@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linda & Nichol Love Story</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-pink: #ff85a1;
+            --soft-pink: #fbb1bd;
+            --dark-pink: #f72585;
+            --bg-color: #fff0f3;
+            --text-color: #4a4a4a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            overflow-x: hidden;
+        }
+
+        /* Hero Section */
+        header {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(rgba(255, 240, 243, 0.8), rgba(255, 240, 243, 0.8)), 
+                        url('https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&q=80&w=1470&ixlib=rb-4.0.3') center/cover;
+            padding: 20px;
+        }
+
+        .couple-names {
+            font-family: 'Dancing Script', cursive;
+            font-size: 4rem;
+            color: var(--dark-pink);
+            margin-bottom: 10px;
+        }
+
+        .hero-sub {
+            font-size: 1.2rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--primary-pink);
+        }
+
+        /* Profile Section */
+        .profile-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 80px 10%;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .profile-card {
+            text-align: center;
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 5px solid white;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .profile-img:hover {
+            transform: scale(1.05);
+        }
+
+        .heart {
+            font-size: 2.5rem;
+            color: var(--dark-pink);
+            animation: beat 1s infinite alternate;
+        }
+
+        @keyframes beat {
+            to { transform: scale(1.2); }
+        }
+
+        /* Gallery Section */
+        .gallery-section {
+            padding: 80px 5%;
+            background-color: white;
+            text-align: center;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 40px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            height: 300px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        footer {
+            padding: 40px;
+            text-align: center;
+            background-color: var(--primary-pink);
+            color: white;
+        }
+
+        /* Floating Hearts JS Container */
+        #heart-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 999;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="heart-container"></div>
+
+    <header>
+        <div data-aos="zoom-in">
+            <p class="hero-sub">Our Love Journey</p>
+            <h1 class="couple-names">Linda & Nichol</h1>
+            <p>Sejak 2024 • Bersama Selamanya</p>
+        </div>
+    </header>
+
+    <section class="profile-container">
+        <div class="profile-card" data-aos="fade-right">
+            <img src="lindut.png" alt="Linda Herdianti" class="profile-img">
+            <h2 style="margin-top:15px; color: var(--dark-pink);">Linda Herdianti</h2>
+        </div>
+
+        <div class="heart" data-aos="zoom-in">❤</div>
+
+        <div class="profile-card" data-aos="fade-left">
+            <img src="jep.png" alt="Jefri Nichol" class="profile-img">
+            <h2 style="margin-top:15px; color: var(--dark-pink);">Jefri Nichol</h2>
+        </div>
+    </section>
+
+    <section class="gallery-section">
+        <h2 style="font-family: 'Dancing Script', cursive; font-size: 3rem; color: var(--primary-pink);">Gallery Dashboard</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item" data-aos="flip-left"><img src="https://media.suara.com/pictures/653x366/2025/11/05/30860-jefri-nichol-dan-ameera-khan.jpg" alt="Foto 1"></div>
+            <div class="gallery-item" data-aos="flip-left" data-aos-delay="100"><img src="https://img.okezone.com/content/2024/05/18/33/3009985/jefri-nichol-diduga-diselingkuhi-netizen-ramai-bela-maria-theodore-cwZY36gtXC.jpg" alt="Foto 2"></div>
+            <div class="gallery-item" data-aos="flip-left" data-aos-delay="200"><img src="https://img.cumicumi.com/uploads/public/5c8/9e6/679/th_711x391_5c89e6679f496825268650.jpg" alt="Foto 3"></div>
+            <div class="gallery-item" data-aos="flip-left" data-aos-delay="300"><img src="https://media.suara.com/pictures/1600x840/2025/01/16/81248-jefri-nichol-dan-ameera-khan.jpg" alt="Foto 4"></div>
+            <div class="gallery-item" data-aos="flip-left" data-aos-delay="400"><img src="https://cms.disway.id/uploads/7db3b1cce599985f35fd9bc6f889aee4.jpeg" alt="Foto 5"></div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Created with Love for Linda & Nichol &copy; 2026</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Inisialisasi Animasi Scroll
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        // Script Efek Hati Berjatuhan
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('floating-heart');
+            heart.innerHTML = '🌸';
+            heart.style.position = 'fixed';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.top = '-20px';
+            heart.style.fontSize = (Math.random() * 20 + 10) + 'px';
+            heart.style.opacity = Math.random();
+            heart.style.transition = 'transform 5s linear, opacity 5s';
+            
+            document.getElementById('heart-container').appendChild(heart);
+
+            setTimeout(() => {
+                heart.style.transform = `translateY(100vh) rotate(${Math.random() * 360}deg)`;
+                heart.style.opacity = '0';
+            }, 100);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 6000);
+        }
+
+        setInterval(createHeart, 500);
+    </script>
+</body>
+</html>
